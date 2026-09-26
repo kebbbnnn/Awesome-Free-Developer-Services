@@ -10,6 +10,7 @@ The goal of this list is to help you build and run real projects with **$0 infra
 
 * [Databases](#-databases)
 * [Vector Databases & Embeddings](#-vector-databases--embeddings)
+* [Embedded & Analytical Databases](#-embedded--analytical-databases)
 * [Backend & App Hosting](#-backend--app-hosting)
 * [Serverless & Edge](#-serverless--edge)
 * [Object & File Storage](#-object--file-storage)
@@ -29,10 +30,16 @@ The goal of this list is to help you build and run real projects with **$0 infra
 * [CI/CD](#-cicd)
 * [Containers & Registries](#-containers--registries)
 * [AI / LLM APIs](#-ai--llm-apis)
+* [AI Web Scraping & Crawling](#-ai-web-scraping--crawling)
+* [Speech, Audio & Voice AI](#-speech-audio--voice-ai)
 * [Image & Media Processing](#-image--media-processing)
 * [Maps & Geolocation](#-maps--geolocation)
 * [Feature Flags](#-feature-flags)
 * [API Gateways & Reverse Proxies](#-api-gateways--reverse-proxies)
+* [Secrets Management & Security](#-secrets-management--security)
+* [Browser Automation & Testing](#-browser-automation--testing)
+* [Documentation & Developer Portals](#-documentation--developer-portals)
+* [Payment Sandboxes & Testing](#-payment-sandboxes--testing)
 * [Developer Utilities](#-developer-utilities)
 * [Free VPS / Compute](#-free-vps--compute)
 * [Mobile Development](#-mobile-development)
@@ -84,11 +91,32 @@ The goal of this list is to help you build and run real projects with **$0 infra
 | [Cloudflare Vectorize](https://developers.cloudflare.com/vectorize/) | Edge Vector DB         | 30M queried dimensions/mo, 5M stored dimensions        | ❌           |
 | [pgvector](https://github.com/pgvector/pgvector)                     | PostgreSQL Extension   | Included in free Neon and Supabase tiers               | ❌           |
 | [Chroma](https://www.trychroma.com)                                  | Embedded Vector DB     | Open source / local / self-hostable                    | —           |
+| [LanceDB](https://lancedb.com)                                       | Embedded Vector DB     | Open source serverless vector DB for multi-modal AI    | —           |
 | [Weaviate Cloud](https://weaviate.io)                                | Hybrid/Vector DB       | 14-day dynamic sandboxes or free open source           | —           |
 
 ### ⭐ Particularly useful
 
 **Qdrant Cloud** offers a permanent 1 GB cluster (no credit card) running true native Rust vector search. If you are building with PostgreSQL on Neon or Supabase, **pgvector** is pre-installed and uses your existing database quota without requiring a separate vector provider.
+
+---
+
+# 📊 Embedded & Analytical Databases
+
+Lightweight in-process or columnar databases designed for fast local execution, real-time analytics (OLAP), data science, and serverless querying without running heavy database clusters.
+
+| Service                              | Type                          | Free Offering                                                 | CC Required |
+| ------------------------------------ | ----------------------------- | ------------------------------------------------------------- | ----------- |
+| [DuckDB](https://duckdb.org)         | In-Process Columnar OLAP      | 100% open source, zero external dependencies, reads Parquet/S3 | —           |
+| [ClickHouse](https://clickhouse.com) | High-Performance OLAP DB     | Open-source self-hosted or cloud free trial                   | —           |
+| [Tinybird](https://www.tinybird.co)  | Serverless ClickHouse Engine  | 10 GB storage, 1,000 req/day free, auto-generated SQL APIs    | ❌           |
+| [Chroma](https://www.trychroma.com)  | Embedded Vector / Document DB | 100% open-source Python/JS in-process store                   | —           |
+| [LanceDB](https://lancedb.com)       | In-Process Multi-modal Vector | 100% open source, disk-backed serverless vector engine        | —           |
+
+### ⭐ Particularly useful
+
+**DuckDB** is the "SQLite of analytics." It runs directly inside your application process (Python, Node.js, Rust, Go, or WASM in the browser), requires zero background daemon, and can query multi-gigabyte Parquet or CSV files directly from S3 or local disk with extreme efficiency.
+
+**Tinybird** exposes ClickHouse as serverless REST APIs with automated endpoint generation and a permanent free tier that requires no credit card.
 
 ---
 
@@ -262,10 +290,13 @@ Resend currently offers **3,000 emails/month**, with a 100-email/day limit on it
 | [Supabase Auth](https://supabase.com/auth)                           | 50K MAU                                       |
 | [Firebase Authentication](https://firebase.google.com/products/auth) | Free authentication                           |
 | [Clerk](https://clerk.com)                                           | Free developer tier (10,000 MAU)              |
+| [Descope](https://descope.com)                                       | 7,500 MAU, Passkeys, SSO, drag-and-drop flows  |
 | [Zitadel](https://zitadel.com)                                       | 25,000 requests/month free cloud + open source|
 | [Auth0](https://auth0.com)                                           | Free tier (7,500 active users)                |
 | [Kinde](https://kinde.com)                                           | Free tier                                     |
 | [SuperTokens](https://supertokens.com)                               | 5,000 MAU free managed cloud + open source    |
+| [Corbado](https://www.corbado.com)                                   | 1,000 MAU, Passkey-first auth & biometrics     |
+| [Hanko](https://hanko.io)                                            | 1,000 MAU free cloud + open-source Passkey auth|
 | [Ory Network](https://www.ory.sh)                                    | 200 DAU free developer tier + open source     |
 | [WorkOS](https://workos.com)                                         | Free developer features                       |
 | [Logto](https://logto.io)                                            | Free tier + open source                       |
@@ -414,6 +445,7 @@ Free AI quotas change particularly often, so verify current limits before buildi
 | [GitHub Models](https://github.com/marketplace/models)                 | Free playground & API access (GPT-4o, Llama 3.3, Mistral)  |
 | [Groq](https://groq.com)                                               | Free developer API limits with ultra-fast LPU inference     |
 | [Cerebras](https://www.cerebras.ai)                                    | Free developer access / high token-per-second inference    |
+| [DeepSeek](https://platform.deepseek.com)                              | 5M free tokens on signup, ultra-low cost V3/R1 reasoning   |
 | [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai/) | Free daily allowance (10,000 Neurons/day)                  |
 | [OpenRouter](https://openrouter.ai)                                    | Free models (endpoints tagged with `:free`)                |
 | [Voyage AI](https://www.voyageai.com)                                   | First 200M tokens free for high-accuracy embeddings        |
@@ -429,6 +461,48 @@ Free AI quotas change particularly often, so verify current limits before buildi
 > 💡 **Pro-Tip**: **GitHub Models** allows developers to test leading commercial LLMs (like GPT-4o and Mistral Large) via standard OpenAI-compatible SDKs using a personal GitHub token at $0 cost. **Google AI Studio** offers one of the highest hosted free-tier throughput allowances for Gemini models (up to 15 RPM / 1M TPM on Flash tiers).
 >
 > For a genuinely zero-cost, permanent AI application without external API rate limits, running local models via **Ollama** or **llama.cpp** provides complete predictability.
+
+---
+
+# 🕷️ AI Web Scraping & Crawling
+
+Modern tools and APIs designed specifically for AI agents, LLMs, and RAG pipelines to bypass bot blockers, execute JavaScript, and convert arbitrary web pages into clean Markdown or structured JSON.
+
+| Service                                           | Type                     | Free Offering                                                        | CC Required |
+| ------------------------------------------------- | ------------------------ | -------------------------------------------------------------------- | ----------- |
+| [Firecrawl](https://www.firecrawl.dev)            | LLM Scraping & Crawling  | 500 free scrape credits, clean Markdown/JSON, handles JS rendering  | ❌           |
+| [Jina Reader](https://jina.ai/reader)             | URL-to-Markdown API      | Free web-to-markdown via `r.jina.ai/<url>`, 20 req/min without key   | ❌           |
+| [Tavily Search](https://tavily.com)               | Search API for AI Agents | 1,000 free searches/month, optimized for RAG context retrieval       | ❌           |
+| [ScrapingAnt](https://scrapingant.com)            | Headless Web Scraper     | 10,000 free API credits/month, rotating proxies & Chrome rendering   | ❌           |
+| [Exa](https://exa.ai)                             | Neural Search for AI     | $10 free credits (~1,000 search queries)                             | ❌           |
+| [Crawl4AI](https://github.com/unclecode/crawl4ai) | Open Source LLM Crawler  | 100% free open-source asynchronous web crawler tailored for LLMs     | —           |
+| [Browserless](https://www.browserless.io)         | Headless Chrome API      | 1,000 free units/month for browser automation and extraction         | ❌           |
+
+### ⭐ Particularly useful
+
+**Jina Reader** provides the easiest extraction workflow on the internet: prepend `https://r.jina.ai/` before any web URL to retrieve clean, LLM-ready markdown with navigation bars, advertisements, and cookie banners automatically removed. No registration or API key is required for basic usage.
+
+**Firecrawl** turns entire websites into clean LLM-ready knowledge with its crawl endpoints, automatically handling JavaScript hydration, pagination, and dynamic client-side rendering.
+
+---
+
+# 🎙️ Speech, Audio & Voice AI
+
+Production-grade speech recognition (STT), voice generation (TTS), and audio intelligence APIs with generous developer tiers.
+
+| Service                                             | Type                         | Free Tier                                                      | CC Required |
+| --------------------------------------------------- | ---------------------------- | -------------------------------------------------------------- | ----------- |
+| [Deepgram](https://deepgram.com)                    | Speech-to-Text & TTS         | $200 free credit on signup (~45,000 minutes of STT / Nova-2)   | ❌           |
+| [ElevenLabs](https://elevenlabs.io)                 | AI Voice & Text-to-Speech    | 10,000 characters/month free forever, realistic voices, API    | ❌           |
+| [AssemblyAI](https://www.assemblyai.com)            | Speech AI & Audio Insights   | $50 free credits, transcription, summarization, diarization    | ❌           |
+| [OpenAI Whisper](https://github.com/openai/whisper) | Open-Source Transcription    | 100% free open-source state-of-the-art multilingual STT models | —           |
+| [Piper](https://github.com/rhasspy/piper)           | Fast Local Neural TTS        | 100% free open-source, ultra-low latency on CPU / Raspberry Pi | —           |
+
+### ⭐ Particularly useful
+
+**Deepgram** offers an unprecedented **$200 free credit** with no credit card required, allowing developers to transcribe hundreds of hours of audio or stream real-time conversational voice agents at zero cost.
+
+**ElevenLabs** provides the highest quality synthetic human speech with 10,000 free characters every month for prototypes and voice-over automation.
 
 ---
 
@@ -485,6 +559,67 @@ Free AI quotas change particularly often, so verify current limits before buildi
 | [Caddy](https://caddyserver.com)                                                                    | Open source reverse proxy |
 | [Traefik](https://traefik.io)                                                                       | Open source               |
 | [Nginx](https://nginx.org)                                                                          | Open source               |
+
+---
+
+# 🔑 Secrets Management & Security
+
+Secure centralized vaults to store API keys and environment variables, keeping `.env` files out of source control and syncing across cloud deployments.
+
+| Service                                                                     | Free Tier                                                      | Best For                           | CC Required |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------- | ---------------------------------- | ----------- |
+| [Doppler](https://doppler.com)                                              | Free for up to 5 users, unlimited secrets, CLI & sync          | Centralized secret orchestration   | ❌           |
+| [Infisical](https://infisical.com)                                          | 5 users free on cloud + 100% open-source self-hostable         | End-to-end encrypted secret sync   | ❌           |
+| [Phase](https://phase.dev)                                                  | Free developer cloud (3 users) + self-hostable via Docker       | KMS/PKI-backed developer secrets   | ❌           |
+| [Bitwarden Secrets Manager](https://bitwarden.com/products/secrets-manager) | Free for 2 users, 3 service accounts, unlimited secrets        | Individual devs & small projects   | ❌           |
+| [HashiCorp Vault](https://www.vaultproject.io)                              | Open-source Community edition                                  | Enterprise self-hosted vaults      | —           |
+
+### ⭐ Particularly useful
+
+**Doppler** eliminates `.env` file management completely. You can run your local app with `doppler run -- npm start` to inject secrets at runtime without writing them to disk, and automatically push secrets to Vercel, GitHub Actions, Render, and Docker whenever values change.
+
+---
+
+# 🧪 Browser Automation & Testing
+
+Headless browser cloud runners and end-to-end testing infrastructure for web scraping, automated screenshots, and synthetic user journeys.
+
+| Service                                   | Free Offering                                                        | Best For                           | CC Required |
+| ----------------------------------------- | -------------------------------------------------------------------- | ---------------------------------- | ----------- |
+| [Browserless](https://www.browserless.io) | 1,000 free units/month, cloud Puppeteer/Playwright headless Chrome  | Serverless PDF/screenshot/scraping | ❌           |
+| [Checkly](https://www.checklyhq.com)      | 10,000 checks/month, Playwright-based API and browser synthetics     | Continuous E2E user flow alerts    | ❌           |
+| [Playwright](https://playwright.dev)      | 100% free open source (Chromium, Firefox, WebKit)                    | Fast, reliable local & CI testing  | —           |
+| [Puppeteer](https://pptr.dev)             | 100% free open-source Node library for headless Chrome               | Web scraping & PDF rendering       | —           |
+
+---
+
+# 📚 Documentation & Developer Portals
+
+Turn Markdown, OpenAPI specs, or Git repositories into modern, searchable developer documentation and API references.
+
+| Service                                   | Free Tier                                                       | Best For                           | CC Required |
+| ----------------------------------------- | --------------------------------------------------------------- | ---------------------------------- | ----------- |
+| [Mintlify](https://mintlify.com)          | Free starter tier for public docs, modern MDX & components      | Polished SaaS & API documentation  | ❌           |
+| [GitBook](https://www.gitbook.com)        | Free for solo developers and open-source, custom domain support | Team knowledge bases & user guides | ❌           |
+| [Starlight](https://starlight.astro.build)| 100% free open source (Astro-based static docs)                 | Lightning-fast static documentation| —           |
+| [Docusaurus](https://docusaurus.io)       | 100% free open source (React-based from Meta)                   | Content-rich docs with versioning  | —           |
+| [ReadMe](https://readme.com)              | Free starter tier for interactive OpenAPI documentation         | Interactive API explorers          | ❌           |
+
+---
+
+# 💳 Payment Sandboxes & Testing
+
+Simulate credit card checkouts, subscriptions, webhooks, and invoice generation in staging environments without charging real money or providing payment credentials.
+
+| Service                                                | Sandbox Offering                                                        | Best For                              | CC Required |
+| ------------------------------------------------------ | ----------------------------------------------------------------------- | ------------------------------------- | ----------- |
+| [Stripe Sandbox & CLI](https://stripe.com)             | Unlimited free test mode, simulated payments, `stripe listen` forwarding| Full SaaS payments, billing, webhooks | ❌           |
+| [Lemon Squeezy Sandbox](https://www.lemonsqueezy.com)  | Dedicated test mode with mock checkouts, license keys, and webhooks     | Digital downloads & Merchant of Record| ❌           |
+| [Paddle Sandbox](https://paddle.com)                   | Free developer sandbox for testing global subscriptions & tax handling  | International B2B/SaaS billing testing| ❌           |
+
+### ⭐ Particularly useful
+
+The **Stripe CLI** (`stripe listen --forward-to localhost:3000/api/webhook`) forwards live test webhook events directly to your local development server with zero port-forwarding or ngrok setup required.
 
 ---
 
@@ -614,6 +749,19 @@ This section is particularly useful for developers who want to build without ent
 | [Web3Forms](https://web3forms.com)                     | Forms          | Unlimited form submissions to email      |
 | [Tally.so](https://tally.so)                           | Forms          | Unlimited forms and submissions          |
 | [GitHub Models](https://github.com/marketplace/models) | AI / LLM       | Free access to GPT-4o, Llama 3.3 via PAT |
+| [DeepSeek](https://platform.deepseek.com)              | AI / LLM       | 5M free tokens on signup                 |
+| [Firecrawl](https://www.firecrawl.dev)                | Web Scraping   | 500 free scrape credits                  |
+| [Jina Reader](https://jina.ai/reader)                 | Web Scraping   | Free URL-to-markdown API (`r.jina.ai`)   |
+| [Tavily](https://tavily.com)                           | Search / AI    | 1,000 free searches/month                |
+| [Deepgram](https://deepgram.com)                      | Speech / Audio | $200 free credit on signup               |
+| [ElevenLabs](https://elevenlabs.io)                   | Speech / Audio | 10,000 characters/month free             |
+| [Doppler](https://doppler.com)                        | Secrets / Sec  | 5 users free, unlimited secrets          |
+| [Infisical](https://infisical.com)                    | Secrets / Sec  | 5 users free cloud + open source         |
+| [Bitwarden Secrets Manager](https://bitwarden.com)     | Secrets / Sec  | 2 users free, 3 service accounts         |
+| [Mintlify](https://mintlify.com)                      | Documentation  | Free starter tier for public docs        |
+| [Stripe Sandbox](https://stripe.com)                  | Payments       | Unlimited test mode & CLI forwarding     |
+| [Descope](https://descope.com)                        | Authentication | 7,500 MAU free, Passkeys, SSO            |
+| [Browserless](https://www.browserless.io)             | Automation     | 1,000 free units/month headless Chrome   |
 | [Vercel](https://vercel.com)                           | Hosting        | Free Hobby                               |
 | [Netlify](https://www.netlify.com)                     | Hosting        | Free plan                                |
 | [Render](https://render.com)                           | Hosting        | Free services                            |
@@ -630,7 +778,7 @@ This section is particularly useful for developers who want to build without ent
 | [Sentry](https://sentry.io)                            | Error tracking | Free tier                                |
 | [Expo](https://expo.dev)                               | Mobile         | Free development tooling                 |
 
-Firebase's current pricing explicitly describes its Spark/no-cost plan as requiring **no payment method**, while Zeabur, TiDB Cloud, and Railway explicitly advertise no-credit-card signup/free usage.
+Firebase's current pricing explicitly describes its Spark/no-cost plan as requiring **no payment method**, while services like Deepgram, Doppler, Jina, Zeabur, TiDB Cloud, and Railway provide immediate free-tier access without payment credentials.
 
 ---
 
@@ -669,7 +817,18 @@ When a hosted service's free tier isn't enough, self-hosting can turn many servi
 | LLM                     | llama.cpp               |
 | Vector DB               | Qdrant                  |
 | Vector DB               | Chroma                  |
+| Vector DB               | LanceDB                 |
 | Vector DB               | Weaviate                |
+| AI Web Scraping         | Crawl4AI                |
+| Speech AI (STT)         | OpenAI Whisper          |
+| Voice Synthesis (TTS)   | Piper                   |
+| Secrets Management      | Infisical               |
+| Secrets Management      | HashiCorp Vault         |
+| Secrets Management      | Phase                   |
+| Documentation           | Starlight (Astro)       |
+| Documentation           | Docusaurus              |
+| Analytical DB (OLAP)    | DuckDB                  |
+| Headless Browser        | Playwright / Puppeteer  |
 
 ---
 
@@ -761,6 +920,63 @@ Cloudflare
     ┌───────────────┐     ┌───────────────┐   ┌───────────────┐
     │    Resend     │     │     Axiom     │   │  UptimeRobot  │
     │  Email / Auth │     │0.5TB Log Ingest│  │Uptime & Alerts│
+    └───────────────┘     └───────────────┘   └───────────────┘
+```
+
+### 4. Autonomous AI Agent & Scraping Pipeline ($0 Stack)
+```text
+                    ┌─────────────────────────┐
+                    │      Scheduled Job      │
+                    │  GitHub Actions / Cron  │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │      Worker / API       │
+                    │ Cloudflare Workers / Go │
+                    └──────┬───────────┬──────┘
+                           │           │
+            ┌──────────────┴──────┐    └──────────────┐
+            │                     │                   │
+            ▼                     ▼                   ▼
+    ┌───────────────┐     ┌───────────────┐   ┌───────────────┐
+    │Jina Reader /  │     │ LanceDB /     │   │ Google Gemini │
+    │   Firecrawl   │     │ Qdrant Cloud  │   │  2.0 Flash /  │
+    │ Web Extraction│     │ Embeddings DB │   │ GitHub Models │
+    └───────┬───────┘     └───────────────┘   └───────────────┘
+            │
+            ▼
+    ┌───────────────┐     ┌───────────────┐   ┌───────────────┐
+    │    Doppler    │     │ Upstash QStash│   │  Better Stack │
+    │Secret Inject  │     │Task Queue/Dedu│   │ Logs & Uptime │
+    └───────────────┘     └───────────────┘   └───────────────┘
+```
+
+### 5. Production Full-Stack SaaS ($0 Stack) with Passkeys & Secrets
+```text
+                    ┌─────────────────────────┐
+                    │       Cloudflare        │
+                    │ DNS / CDN / WAF / SSL   │
+                    └────────────┬────────────┘
+                                 │
+                                 ▼
+                    ┌─────────────────────────┐
+                    │     Cloudflare Pages    │
+                    │ Next.js / SvelteKit / UI│
+                    └──────┬───────────┬──────┘
+                           │           │
+            ┌──────────────┴──────┐    └──────────────┐
+            │                     │                   │
+            ▼                     ▼                   ▼
+    ┌───────────────┐     ┌───────────────┐   ┌───────────────┐
+    │ Neon Postgres │     │Descope/Better-│   │Stripe Sandbox │
+    │ 0.5GB / 100 CU│     │Auth (Passkeys)│   │& Webhooks CLI │
+    └───────┬───────┘     └───────────────┘   └───────────────┘
+            │
+            ▼
+    ┌───────────────┐     ┌───────────────┐   ┌───────────────┐
+    │    Doppler    │     │    Resend     │   │     Axiom     │
+    │  Secret Sync  │     │3k Emails/Month│   │500GB Log Ingest│
     └───────────────┘     └───────────────┘   └───────────────┘
 ```
 
