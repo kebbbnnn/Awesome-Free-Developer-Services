@@ -588,6 +588,7 @@ Headless browser cloud runners and end-to-end testing infrastructure for web scr
 | ----------------------------------------- | -------------------------------------------------------------------- | ---------------------------------- | ----------- |
 | [Browserless](https://www.browserless.io) | 1,000 free units/month, cloud Puppeteer/Playwright headless Chrome  | Serverless PDF/screenshot/scraping | ❌           |
 | [Checkly](https://www.checklyhq.com)      | 10,000 checks/month, Playwright-based API and browser synthetics     | Continuous E2E user flow alerts    | ❌           |
+| [CurlShot](https://curlshot.com)          | 100 screenshots/month free forever, hosted screenshot API (PNG/JPEG/WebP/PDF) | URL/HTML to screenshot or PDF via one GET request | ❌           |
 | [Playwright](https://playwright.dev)      | 100% free open source (Chromium, Firefox, WebKit)                    | Fast, reliable local & CI testing  | —           |
 | [Puppeteer](https://pptr.dev)             | 100% free open-source Node library for headless Chrome               | Web scraping & PDF rendering       | —           |
 
