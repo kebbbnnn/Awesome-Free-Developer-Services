@@ -143,12 +143,15 @@ Lightweight in-process or columnar databases designed for fast local execution, 
 | [PythonAnywhere](https://www.pythonanywhere.com)                 | Free plan                                  | Python                             |
 | [Replit](https://replit.com)                                     | Free plan                                  | Prototyping                        |
 | [Glitch](https://glitch.com)                                     | Free options                               | Small web projects                 |
+| [Shipvela](https://shipvela.com/) | Hobby: 3 projects, 20 publishes/month | React, Vite and static websites |
 
 Vercel's current Hobby plan is $0 and includes items such as automatic CI/CD, CDN, DDoS mitigation and serverless/edge functionality.
 
 **Hugging Face Spaces** is an exceptional free resource for backend Python applications, Gradio/Streamlit dashboards, and Dockerized microservices, offering 2 vCPU and 16 GB of RAM on its basic CPU tier with $0 infrastructure cost.
 
 Netlify currently offers a $0 Free plan with 300 monthly credits and includes deployment, previews, functions, database/blob functionality and CDN delivery.
+
+**Shipvela** offers an ongoing $0 Hobby tier with 3 projects and 20 publishes per month, custom domains and managed HTTPS. Account sign-up is required; no credit card is required for Hobby. GitHub imports and CLI publishing support React, Vite and static sites; GitHub updates require selected App access and a successful first publish. Prebuilt Astro output can be published with the CLI; Astro repository imports are not supported. [Pricing](https://shipvela.com/#pricing), [docs](https://shipvela.com/docs). Last verified: 2026-10-04.
 
 Railway is worth including, but with an important caveat: its current free plan provides **$1/month of free usage after the initial $5/30-day trial**, rather than unlimited free hosting.
 
