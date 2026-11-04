@@ -629,6 +629,12 @@ The **Stripe CLI** (`stripe listen --forward-to localhost:3000/api/webhook`) for
 
 # 🛠️ Developer Utilities
 
+### AI Coding Usage Planning
+
+| Tool | Free Offering | Notes |
+| ---- | ------------- | ----- |
+| [Jvlang AI Codex Usage Tracker](https://jvlangai.com/codex-reset#tracker) | Free manual usage/time comparison, countdowns and calendar export | No credit card or account; ongoing free core; Chinese UI; browser-local records; no live usage sync or extra credits; verified 2026-11-04 |
+
 ### 🚇 Local Tunnels & Port Forwarding
 
 | Tool | Free Offering | Notes |
