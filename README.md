@@ -720,6 +720,7 @@ The **Stripe CLI** (`stripe listen --forward-to localhost:3000/api/webhook`) for
 | [Nager.Date](https://date.nager.at)                     | Public holidays worldwide                                  |
 | [Open Library](https://openlibrary.org/developers/api)  | Book metadata and covers                                   |
 | [OpenAlex](https://openalex.org)                        | Scientific papers & scholarly data                         |
+| [Datacircle](https://datacircle.dev)                    | Find the best GTM APIs, free and open API, no key ([api.datacircle.dev/v1](https://api.datacircle.dev/v1)) |
 | [Crossref](https://www.crossref.org)                    | Academic DOI metadata                                      |
 | [NASA APIs](https://api.nasa.gov)                       | Astronomy images, Mars rovers, asteroid data               |
 | [OpenStreetMap](https://www.openstreetmap.org)          | Global geographic map data                                 |
