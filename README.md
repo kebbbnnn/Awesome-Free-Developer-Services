@@ -648,6 +648,7 @@ The **Stripe CLI** (`stripe listen --forward-to localhost:3000/api/webhook`) for
 | [Smee.io](https://smee.io) | Webhook payload delivery service | Forwarding GitHub webhooks to localhost |
 | [Bruno](https://www.usebruno.com) | 100% free, offline-first, Git-friendly open-source API client | Postman alternative (stores collections in your Git repo) |
 | [Hoppscotch](https://hoppscotch.com) | Lightweight, open-source web-based API testing client | Fast browser-based API testing |
+| [BestJSON](https://bestjson.com/) | Free browser-local JSON tools; 20 MiB general input ceiling, tool-specific safeguards; no account or card | Inspect, validate, repair and compare saved JSON responses; not an HTTP client |
 
 ### 📐 Architecture & Diagrams
 
