@@ -800,6 +800,7 @@ When a hosted service's free tier isn't enough, self-hosting can turn many servi
 | Analytics               | Umami                   |
 | Analytics               | Matomo                  |
 | Monitoring              | Uptime Kuma             |
+| Monitoring              | [SiteWatcher](https://github.com/NikKurkov/sitewatcher) |
 | Error Tracking          | GlitchTip               |
 | Auth                    | Keycloak                |
 | Auth                    | Authelia                |
